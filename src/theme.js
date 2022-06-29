@@ -1,28 +1,40 @@
 const theme = {
 	colors: {
 		background: {
-			primary: "#fff",
-			secondary: "#606c76",
+			primary: "#0090e7",
+			secondary: "#e4eaec",
+			success: "#00d25b",
+			info: "#8f5fe8",
+			warning: "#ffab00",
+			danger: "#fc424a",
+			dark: "#0d0d0d",
+			body: "#191C24",
 		},
 		text: {
-			primary: "#606c76",
-			secondary: "#9b4dca",
-		},
-		border: {
-			primary: "rgba(0, 0, 0, 0.3)",
+			primary: "#ffffff",
+			secondary: "#6c7293",
+			success: "#00d25b",
+			danger: "#fc424a",
 		},
 	},
 	sizes: {
 		spacing: {
-			small: "0.5rem",
-			medium: "1rem",
+			xs: "0.125rem",
+			s: "0.25rem",
+			m: "0.5rem",
+			l: "1rem",
+			xl: "1.5rem",
+			xxl: "2rem",
+			xxxl: "3rem",
 		},
 		typography: {
 			light: "300",
 			regular: "400",
 			bold: "600",
 		},
-		font: "'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+	},
+	fonts: {
+		primary: "'Rubik', sans-serif",
 	},
 };
 
