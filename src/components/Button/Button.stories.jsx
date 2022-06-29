@@ -9,7 +9,7 @@ export default {
 };
 
 export const Default = () => (
-	<ThemeProvider>
-		<Button>Default button</Button>;
+	<ThemeProvider theme={theme}>
+		<Button>Default button</Button>
 	</ThemeProvider>
 );
