@@ -22,7 +22,7 @@ export const StyledLink = styled(Link)`
 	}
 `;
 
-export const Container = styled.div`
-	display: flex;
+export const Control = styled.div`
 	align-items: center;
+	display: flex;
 `;

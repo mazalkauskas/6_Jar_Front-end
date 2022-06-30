@@ -20,7 +20,7 @@ export const StyledIcon = styled(FontAwesomeIcon)`
 	}
 `;
 
-export const Container = styled.div`
+export const Control = styled.div`
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
