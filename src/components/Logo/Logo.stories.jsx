@@ -1,15 +1,15 @@
 import React from "react";
-import Notification from "./Notification";
+import Logo from "./Logo";
 import { ThemeProvider } from "styled-components";
 import theme from "../../theme";
 
 export default {
-	title: "Notification",
-	component: Notification,
+	title: "Logo",
+	component: Logo,
 };
 
 export const Primary = () => (
 	<ThemeProvider theme={theme}>
-		<Notification>Notification Text</Notification>
+		<Logo>LOGO</Logo>
 	</ThemeProvider>
 );

@@ -27,10 +27,23 @@ const theme = {
 			xxl: "2rem",
 			xxxl: "3rem",
 		},
+		text: {
+			s: "0.875rem",
+			m: "1rem",
+			l: "1.125rem",
+			xl: "1.5rem",
+			xxl: "2rem",
+		},
 		typography: {
 			light: "300",
 			regular: "400",
 			bold: "600",
+		},
+		breakpoints: {
+			s: "40rem",
+			m: "50rem",
+			l: "65rem",
+			xl: "80rem",
 		},
 	},
 	fonts: {

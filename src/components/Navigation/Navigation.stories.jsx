@@ -1,15 +1,17 @@
 import React from "react";
-import Notification from "./Notification";
+import Navigation from "./Navigation";
 import { ThemeProvider } from "styled-components";
 import theme from "../../theme";
+import { withRouter } from "storybook-addon-react-router-v6";
 
 export default {
-	title: "Notification",
-	component: Notification,
+	title: "Navigation",
+	component: Navigation,
+	decorators: [withRouter],
 };
 
 export const Primary = () => (
 	<ThemeProvider theme={theme}>
-		<Notification>Notification Text</Notification>
+		<Navigation />
 	</ThemeProvider>
 );
