@@ -5,7 +5,7 @@ import theme from "../../theme";
 import { withRouter } from "storybook-addon-react-router-v6";
 
 export default {
-	title: "Navigation",
+	title: "Components/Navigation",
 	component: Navigation,
 	decorators: [withRouter],
 };

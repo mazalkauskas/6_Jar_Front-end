@@ -8,12 +8,12 @@ const MobileNavigation = ({ className }) => {
 
 	return (
 		<S.Nav className={className}>
-			<S.Container>
+			<S.Control>
 				<S.StyledLogoLink to="/">
 					<Logo>6JAR's</Logo>
 				</S.StyledLogoLink>
 				<S.StyledIcon icon={isOpen ? faXmark : faBars} onClick={() => setIsOpen(!isOpen)} />
-			</S.Container>
+			</S.Control>
 			{isOpen && (
 				<S.NavExpansion>
 					<S.StyledLink to="/register">Sign up</S.StyledLink>

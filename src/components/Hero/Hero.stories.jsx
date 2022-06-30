@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 import theme from "../../theme";
 
 export default {
-	title: "Hero",
+	title: "Components/Hero",
 	component: Hero,
 };
 

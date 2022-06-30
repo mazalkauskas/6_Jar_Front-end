@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 import theme from "../../theme";
 
 export default {
-	title: "Notification",
+	title: "Components/Notification",
 	component: Notification,
 };
 

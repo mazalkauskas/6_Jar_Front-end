@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 import theme from "../../theme";
 
 export default {
-	title: "Section",
+	title: "Components/Section",
 	component: Section,
 };
 

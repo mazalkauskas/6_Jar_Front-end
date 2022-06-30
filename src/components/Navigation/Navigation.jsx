@@ -8,10 +8,10 @@ const Navigation = ({ className }) => {
 			<S.StyledLogoLink to="/">
 				<Logo>SIXJAR's</Logo>
 			</S.StyledLogoLink>
-			<S.Container>
+			<S.Control>
 				<S.StyledLink to="/register">Sign up</S.StyledLink>
 				<S.StyledLink to="/login">Sign in</S.StyledLink>
-			</S.Container>
+			</S.Control>
 		</S.Nav>
 	);
 };
