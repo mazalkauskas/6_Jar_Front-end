@@ -6,7 +6,13 @@ const TextInput = ({ type, label, placeholder, value, handleChange }) => {
 	return (
 		<S.InputField>
 			<label htmlFor={label}>{label}</label>
-			<S.Input type={type} id={label} placeholder={placeholder} value={value} onChange={handleChange} />
+			<S.Input
+				type={type}
+				id={label}
+				placeholder={placeholder}
+				value={value}
+				onChange={(e) => handleChange(e.target.value)}
+			/>
 		</S.InputField>
 	);
 };

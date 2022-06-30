@@ -9,7 +9,11 @@ const theme = {
 			danger: "#fc424a",
 			dark: "#0d0d0d",
 			light: "#6c7293",
+			verylight: "#2A3038",
 			body: "#191C24",
+		},
+		hover: {
+			primary: "#26a1eb",
 		},
 		text: {
 			primary: "#ffffff",
@@ -51,6 +55,9 @@ const theme = {
 		},
 		radius: {
 			s: "0.125rem",
+			m: "0.25rem",
+			l: "0.5rem",
+			xl: "1rem",
 		},
 	},
 	fonts: {

@@ -11,7 +11,8 @@ export const Input = styled.input`
 	border: ${(props) => props.theme.sizes.borders.s} solid ${(props) => props.theme.colors.background.light};
 	box-sizing: border-box;
 	color: ${(props) => props.theme.colors.text.primary};
-	margin: ${(props) => props.theme.sizes.spacing.l} 0;
+	margin-bottom: ${(props) => props.theme.sizes.spacing.xl};
+	margin-top: ${(props) => props.theme.sizes.spacing.s};
 	padding: ${(props) => props.theme.sizes.spacing.m};
 	width: 100%;
 	&:focus {
