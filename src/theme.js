@@ -11,6 +11,7 @@ const theme = {
 			light: "#6c7293",
 			verylight: "#2A3038",
 			body: "#191C24",
+			lightbody: "#2A3038",
 		},
 		hover: {
 			primary: "#26a1eb",

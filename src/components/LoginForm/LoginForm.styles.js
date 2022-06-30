@@ -5,7 +5,7 @@ export const Form = styled.form`
 	border-radius: ${(props) => props.theme.sizes.radius.l};
 	font-family: ${(props) => props.theme.fonts.primary};
 	margin-top: ${(props) => props.theme.sizes.spacing.xxl};
-	padding: ${(props) => props.theme.sizes.spacing.xl};
+	padding: ${(props) => props.theme.sizes.spacing.xxxl};
 `;
 
 export const Title = styled.h1`

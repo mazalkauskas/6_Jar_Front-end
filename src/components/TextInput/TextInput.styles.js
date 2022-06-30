@@ -6,9 +6,9 @@ export const InputField = styled.div`
 `;
 
 export const Input = styled.input`
-	background: ${(props) => props.theme.colors.background.body};
+	background: ${(props) => props.theme.colors.background.lightbody};
 	border-radius: ${(props) => props.theme.sizes.radius.s};
-	border: ${(props) => props.theme.sizes.borders.s} solid ${(props) => props.theme.colors.background.light};
+	border: none;
 	box-sizing: border-box;
 	color: ${(props) => props.theme.colors.text.primary};
 	margin-bottom: ${(props) => props.theme.sizes.spacing.xl};
@@ -16,7 +16,7 @@ export const Input = styled.input`
 	padding: ${(props) => props.theme.sizes.spacing.m};
 	width: 100%;
 	&:focus {
-		border-color: ${(props) => props.theme.colors.background.success};
+		border: ${(props) => props.theme.sizes.borders.s} solid ${(props) => props.theme.colors.background.success};
 		outline: none !important;
 	}
 	&::placeholder {
