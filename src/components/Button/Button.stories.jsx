@@ -8,7 +8,7 @@ export default {
 	component: Button,
 };
 
-export const Default = () => (
+export const Primary = () => (
 	<ThemeProvider theme={theme}>
 		<Button>Default button</Button>
 	</ThemeProvider>

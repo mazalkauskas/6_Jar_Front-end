@@ -1,11 +1,13 @@
 import React from "react";
-import Button from "../components/Button/Button";
+import Section from "../components/Section/Section";
+import TextInput from "../components/TextInput/TextInput";
 
 const Home = () => {
 	return (
-		<div>
-			<Button>Hello</Button>
-		</div>
+		<Section>
+			<h1 style={{ color: "white" }}>Home</h1>
+			<TextInput label="Text label" placeholder="Text is here" />
+		</Section>
 	);
 };
 

@@ -8,6 +8,7 @@ const theme = {
 			warning: "#ffab00",
 			danger: "#fc424a",
 			dark: "#0d0d0d",
+			light: "#6c7293",
 			body: "#191C24",
 		},
 		text: {
@@ -44,6 +45,12 @@ const theme = {
 			m: "50rem",
 			l: "65rem",
 			xl: "80rem",
+		},
+		borders: {
+			s: "0.0625rem",
+		},
+		radius: {
+			s: "0.125rem",
 		},
 	},
 	fonts: {
