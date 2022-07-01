@@ -1,19 +1,22 @@
 import React, { useState } from "react";
 import Notification from "../components/Notification/Notification";
-import LoginForm from "../components/LoginForm/LoginForm";
+import ChangePassForm from "../components/ChangePassForm/ChangePassForm";
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const ChangePassword = () => {
 	const [error, setError] = useState();
 
 	const navigate = useNavigate();
 
-	const loginUser = async (inputs) => {
+	const changePass = async (inputs) => {
+		const token = localStorage.getItem("token");
+
 		try {
-			const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/v1/users/login`, {
+			const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/v1/users/change-password`, {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
+					authorization: `Bearer ${token}`,
 				},
 				body: JSON.stringify(inputs),
 			});
@@ -23,7 +26,6 @@ const Login = () => {
 				return setError(data.err);
 			}
 
-			localStorage.setItem("token", data.token);
 			navigate("/home");
 		} catch (err) {
 			return setError(err.message);
@@ -32,10 +34,10 @@ const Login = () => {
 
 	return (
 		<>
-			<LoginForm handleSubmit={loginUser} />
+			<ChangePassForm handleSubmit={changePass} />
 			{error && <Notification>{error}</Notification>};
 		</>
 	);
 };
 
-export default Login;
+export default ChangePassword;
