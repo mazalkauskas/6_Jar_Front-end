@@ -6,14 +6,14 @@ import Button from "../Button/Button";
 import * as S from "./RegisterForm.styles";
 
 const LoginForm = ({ handleSubmit }) => {
-	const [loginValues, updateLoginValues] = useState();
+	const [registerValues, updateLoginValues] = useState();
 	return (
 		<Section>
 			<S.Form
 				onSubmit={(e) => {
 					e.preventDefault();
 
-					handleSubmit(loginValues);
+					handleSubmit(registerValues);
 				}}
 			>
 				<S.Title>Sign up with email</S.Title>
@@ -21,19 +21,19 @@ const LoginForm = ({ handleSubmit }) => {
 					type="text"
 					label="Full name:"
 					placeholder="Enter your full name"
-					handleChange={(nameValue) => updateLoginValues({ ...loginValues, name: nameValue })}
+					handleChange={(nameValue) => updateLoginValues({ ...registerValues, name: nameValue })}
 				/>
 				<TextInput
 					type="email"
 					label="Email:"
 					placeholder="Enter your email"
-					handleChange={(emailValue) => updateLoginValues({ ...loginValues, email: emailValue })}
+					handleChange={(emailValue) => updateLoginValues({ ...registerValues, email: emailValue })}
 				/>
 				<TextInput
 					type="password"
 					label="Password:"
 					placeholder="Enter your password"
-					handleChange={(passwordValue) => updateLoginValues({ ...loginValues, password: passwordValue })}
+					handleChange={(passwordValue) => updateLoginValues({ ...registerValues, password: passwordValue })}
 				/>
 				<Button type="submit">Sign up</Button>
 			</S.Form>

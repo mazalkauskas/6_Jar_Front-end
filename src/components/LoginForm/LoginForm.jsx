@@ -29,7 +29,9 @@ const LoginForm = ({ handleSubmit }) => {
 					placeholder="Enter your password"
 					handleChange={(passwordValue) => updateLoginValues({ ...loginValues, password: passwordValue })}
 				/>
-				<Button type="submit">Login</Button>
+				<S.Control>
+					<Button type="submit">Login</Button>
+				</S.Control>
 			</S.Form>
 		</Section>
 	);

@@ -13,3 +13,9 @@ export const Title = styled.h1`
 	color: ${(props) => props.theme.colors.text.primary};
 	text-align: center;
 `;
+
+export const Control = styled.div`
+	@media (max-width: ${(props) => props.theme.sizes.breakpoints.m}) {
+		text-align: center;
+	}
+`;
