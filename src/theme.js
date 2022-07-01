@@ -53,6 +53,8 @@ const theme = {
 		},
 		borders: {
 			s: "0.0625rem",
+			m: "0.125rem",
+			l: "0.1875rem",
 		},
 		radius: {
 			s: "0.125rem",

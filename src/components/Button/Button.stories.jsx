@@ -8,8 +8,14 @@ export default {
 	component: Button,
 };
 
-export const Primary = () => (
+export const NormalButton = () => (
 	<ThemeProvider theme={theme}>
 		<Button>Default button</Button>
+	</ThemeProvider>
+);
+
+export const OutlineButton = () => (
+	<ThemeProvider theme={theme}>
+		<Button shape="Outline">Default button</Button>
 	</ThemeProvider>
 );
