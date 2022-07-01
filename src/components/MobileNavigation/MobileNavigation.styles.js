@@ -29,11 +29,15 @@ export const Control = styled.div`
 
 export const StyledLink = styled(Link)`
 	color: ${(props) => props.theme.colors.text.secondary};
-	margin: ${(props) => props.theme.sizes.spacing.l};
+	margin: ${(props) => props.theme.sizes.spacing.m} 0;
+	text-align: center;
 	text-decoration: none;
 	&:hover {
 		border-bottom: ${(props) => props.theme.sizes.spacing.xs} solid ${(props) => props.theme.colors.text.primary};
 		color: ${(props) => props.theme.colors.text.primary};
+	}
+	&:last-of-type {
+		margin-bottom: ${(props) => props.theme.sizes.spacing.xxl};
 	}
 `;
 
