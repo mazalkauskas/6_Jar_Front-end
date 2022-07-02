@@ -21,6 +21,7 @@ const theme = {
 			secondary: "#6c7293",
 			success: "#00d25b",
 			danger: "#fc424a",
+			info: "#0090e7",
 		},
 	},
 	sizes: {
@@ -38,7 +39,8 @@ const theme = {
 			m: "1rem",
 			l: "1.125rem",
 			xl: "1.5rem",
-			xxl: "2rem",
+			xxl: "2.5rem",
+			xxxl: "5rem",
 		},
 		typography: {
 			light: "300",

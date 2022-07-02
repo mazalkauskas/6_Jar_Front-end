@@ -5,12 +5,8 @@ import * as S from "./Button.styles";
 const Button = ({ shape, type, children, handleClick }) => {
 	const [isHovering, setIsHovering] = useState(false);
 
-	const handleMouseEnter = () => {
-		setIsHovering(true);
-	};
-
-	const handleMouseLeave = () => {
-		setIsHovering(false);
+	const handleMouse = () => {
+		setIsHovering(!isHovering);
 	};
 
 	const Normal = {};
@@ -25,8 +21,8 @@ const Button = ({ shape, type, children, handleClick }) => {
 			style={shape === "Outline" ? Outline : Normal}
 			type={type}
 			onClick={handleClick}
-			onMouseEnter={handleMouseEnter}
-			onMouseLeave={handleMouseLeave}
+			onMouseEnter={handleMouse}
+			onMouseLeave={handleMouse}
 		>
 			{children}
 		</S.Button>

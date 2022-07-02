@@ -1,21 +1,30 @@
 import styled from "styled-components";
 
-export const Section = styled.section`
-	background: ${(props) => props.theme.colors.background.dark};
+export const Title = styled.h1`
 	color: ${(props) => props.theme.colors.text.primary};
-	font-family: ${(props) => props.theme.fonts.primary};
-	padding: 3rem;
+	font-size: ${(props) => props.theme.sizes.text.xxxl};
+	margin: ${(props) => props.theme.sizes.spacing.xxxl} auto;
+	text-align: center;
+	&:hover {
+		text-shadow: 0.25rem 0.25rem 0.25rem ${(props) => props.theme.colors.text.info};
+	}
 	@media (max-width: ${(props) => props.theme.sizes.breakpoints.m}) {
-		background: ${(props) => props.theme.colors.background.info};
+		font-size: ${(props) => props.theme.sizes.text.xxl};
+		margin: ${(props) => props.theme.sizes.spacing.xxl} auto;
 	}
 `;
 
-export const Container = styled.div`
-	background: ${(props) => props.theme.colors.background.body};
-	border-radius: ${(props) => props.theme.sizes.spacing.m};
-	margin: 2rem;
+export const Subtitle = styled.p`
+	color: ${(props) => props.theme.colors.text.secondary};
+	font-size: ${(props) => props.theme.sizes.text.l};
+	margin: ${(props) => props.theme.sizes.spacing.xxxl} auto;
 	text-align: center;
+	width: 70%;
 	&:hover {
-		background: ${(props) => props.theme.colors.background.primary};
+		color: ${(props) => props.theme.colors.text.primary};
+	}
+	@media (max-width: ${(props) => props.theme.sizes.breakpoints.m}) {
+		width: 100%;
+		margin: ${(props) => props.theme.sizes.spacing.xl} auto;
 	}
 `;

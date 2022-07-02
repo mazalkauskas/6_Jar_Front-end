@@ -6,6 +6,7 @@ export const Container = styled.div`
 	border-radius: ${(props) => props.theme.sizes.radius.m};
 	color: ${(props) => props.theme.colors.text.primary};
 	padding: ${(props) => props.theme.sizes.spacing.xl};
+	margin: ${(props) => props.theme.sizes.spacing.l} 0;
 `;
 
 export const Control = styled.div`
