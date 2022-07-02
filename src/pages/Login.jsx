@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import Notification from "../components/Notification/Notification";
-import LoginForm from "../components/LoginForm/LoginForm";
 import { useNavigate } from "react-router-dom";
+import LoginForm from "../components/LoginForm/LoginForm";
+import Main from "../components/Main/Main";
+import Notification from "../components/Notification/Notification";
 
 const Login = () => {
 	const [error, setError] = useState();
@@ -31,10 +32,10 @@ const Login = () => {
 	};
 
 	return (
-		<>
+		<Main bgColor="#0d0d0d">
 			<LoginForm handleSubmit={loginUser} />
 			{error && <Notification>{error}</Notification>};
-		</>
+		</Main>
 	);
 };
 

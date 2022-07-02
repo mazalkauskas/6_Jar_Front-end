@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Main from "../components/Main/Main";
 import Notification from "../components/Notification/Notification";
 import RegisterForm from "../components/RegisterForm/RegisterForm";
 
@@ -27,10 +28,10 @@ const Register = () => {
 	};
 
 	return (
-		<>
+		<Main bgColor="#0d0d0d">
 			{error && <Notification>{error}</Notification>}
 			<RegisterForm handleSubmit={registerUser} />;
-		</>
+		</Main>
 	);
 };
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Notification from "../components/Notification/Notification";
 import ChangePassForm from "../components/ChangePassForm/ChangePassForm";
+import Main from "../components/Main/Main";
+import Notification from "../components/Notification/Notification";
 import { useNavigate } from "react-router-dom";
 
 const ChangePassword = () => {
@@ -33,10 +34,10 @@ const ChangePassword = () => {
 	};
 
 	return (
-		<>
+		<Main bgColor="#0d0d0d">
 			<ChangePassForm handleSubmit={changePass} />
 			{error && <Notification>{error}</Notification>};
-		</>
+		</Main>
 	);
 };
 
