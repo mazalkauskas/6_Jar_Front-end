@@ -13,12 +13,16 @@ export const Category = styled.div`
 `;
 
 export const StyledIcon = styled(FontAwesomeIcon)`
+	background: ${(props) => props.theme.colors.background.darkbody};
 	border-radius: ${(props) => props.theme.sizes.radius.l};
 	color: ${(props) => props.theme.colors.text.primary};
 	cursor: pointer;
 	font-size: ${(props) => props.theme.sizes.text.xxl};
 	margin-right: ${(props) => props.theme.sizes.spacing.xl};
 	padding: ${(props) => props.theme.sizes.spacing.l};
+	&:hover {
+		background-color: ${(props) => props.theme.colors.background.dark};
+	}
 `;
 
 export const Control = styled.div`

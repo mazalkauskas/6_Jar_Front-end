@@ -18,7 +18,6 @@ const Navigation = ({ className, links }) => {
 					<S.Control>
 						<S.StyledLink to={"/home"}>Dashboard</S.StyledLink>
 						<S.StyledLink to={"/records"}>Records</S.StyledLink>
-						<S.StyledLink to={"/analytics"}>Analytics</S.StyledLink>
 					</S.Control>
 				)}
 			</S.Control>

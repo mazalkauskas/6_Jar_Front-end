@@ -5,7 +5,7 @@ import * as S from "./Category.styles";
 const Category = ({ icon, iconColor, title, description, quantity }) => {
 	return (
 		<S.Category>
-			<S.StyledIcon icon={icon} style={{ background: iconColor }} />
+			<S.StyledIcon icon={icon} style={{ color: iconColor }} />
 			<S.Control>
 				<S.Title>{title}</S.Title>
 				<S.Control2>

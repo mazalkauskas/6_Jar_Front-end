@@ -6,6 +6,9 @@ export const Header = styled.header`
 	background: ${(props) => props.theme.colors.background.body};
 	color: ${(props) => props.theme.colors.text.primary};
 	font-family: ${(props) => props.theme.fonts.primary};
+	position: fixed;
+	top: 0;
+	width: 100%;
 `;
 
 export const StyledNav = styled(Navigation)`
