@@ -9,7 +9,13 @@ const CategoryList = ({ title, categories }) => {
 			<S.CategoryList>
 				{categories.length > 0 &&
 					categories.map((category) => (
-						<Category iconColor={category.color} title={category.title} quantity={category.quantity} />
+						<Category
+							icon={category.icon}
+							iconColor={category.color}
+							title={category.title}
+							description={category.description}
+							quantity={category.quantity}
+						/>
 					))}
 			</S.CategoryList>
 			<S.Line />

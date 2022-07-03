@@ -1,16 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import * as S from "./Category.styles";
-import { faJar } from "@fortawesome/free-solid-svg-icons";
 
-const Category = ({ iconColor, title, quantity }) => {
+const Category = ({ icon, iconColor, title, description, quantity }) => {
 	return (
 		<S.Category>
-			<S.StyledIcon icon={faJar} style={{ color: iconColor }} />
+			<S.StyledIcon icon={icon} style={{ background: iconColor }} />
 			<S.Control>
 				<S.Title>{title}</S.Title>
 				<S.Control2>
-					<S.Text>Remaining money:</S.Text>
+					<S.Text>{description}</S.Text>
 					<S.Amount>{quantity}€</S.Amount>
 				</S.Control2>
 			</S.Control>

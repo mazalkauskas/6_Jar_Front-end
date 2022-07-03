@@ -5,7 +5,7 @@ export const CategoryList = styled.div`
 		display: flex;
 		flex-wrap: wrap;
 		& > div {
-			width: calc(50% - 2rem);
+			width: calc(50% - 1rem);
 			box-sizing: border-box;
 		}
 	}

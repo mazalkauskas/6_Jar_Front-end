@@ -13,9 +13,12 @@ export const Category = styled.div`
 `;
 
 export const StyledIcon = styled(FontAwesomeIcon)`
+	border-radius: ${(props) => props.theme.sizes.radius.l};
 	color: ${(props) => props.theme.colors.text.primary};
-	font-size: ${(props) => props.theme.sizes.text.xxxl};
+	cursor: pointer;
+	font-size: ${(props) => props.theme.sizes.text.xxl};
 	margin-right: ${(props) => props.theme.sizes.spacing.xl};
+	padding: ${(props) => props.theme.sizes.spacing.l};
 `;
 
 export const Control = styled.div`
@@ -32,6 +35,13 @@ export const Control = styled.div`
 
 export const Control2 = styled.div`
 	@media (min-width: ${(props) => props.theme.sizes.breakpoints.m}) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+		text-align: center;
+	}
+	@media (min-width: ${(props) => props.theme.sizes.breakpoints.l}) {
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
