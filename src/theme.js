@@ -49,6 +49,7 @@ const theme = {
 			bold: "600",
 		},
 		breakpoints: {
+			xs: "30rem",
 			s: "40rem",
 			m: "50rem",
 			l: "65rem",
