@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import CategoryList from "../components/CategoryList/CategoryList";
-import StatisticList from "../components/StatisticList/StatisticList";
 import Main from "../components/Main/Main";
-import Table from "../components/Table/Table";
+import StatisticList from "../components/StatisticList/StatisticList";
 import Section from "../components/Section/Section";
+import Table from "../components/Table/Table";
 import { faJar, faPlus, faMinus, faEquals } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
@@ -128,21 +128,6 @@ const Home = () => {
 		getGive();
 	}, []);
 
-	// const Categories = [
-	// 	{ icon: faJar, color: "red", title: "Necessities", description: "Remaining money:", quantity: "48" },
-	// 	{ icon: faJar, color: "yellow", title: "Education", description: "Remaining money:", quantity: "578" },
-	// 	{ icon: faJar, color: "blue", title: "Saving", description: "Remaining money:", quantity: "213" },
-	// 	{ icon: faJar, color: "green", title: "Play", description: "Remaining money:", quantity: "41" },
-	// 	{ icon: faJar, color: "pink", title: "Investment", description: "Remaining money:", quantity: "23" },
-	// 	{ icon: faJar, color: "cyan", title: "Give", description: "Remaining money:", quantity: "60" },
-	// ];
-
-	// const Statistics = [
-	// 	{ icon: faEquals, color: "blue", title: "BALANCE", description: "This month:", quantity: "412" },
-	// 	{ icon: faPlus, color: "green", title: "INCOMES", description: "This month:", quantity: "485" },
-	// 	{ icon: faMinus, color: "red", title: "EXPENSES", description: "This month:", quantity: "213" },
-	// ];
-
 	const TableHeading = [
 		{ heading: "Type", value: "type" },
 		{ heading: "Category", value: "subtype" },
@@ -151,62 +136,78 @@ const Home = () => {
 		{ heading: "Amount", value: "quantity" },
 	];
 
-	if (!historyData) {
+	if (!historyData || !necessitiesData || !educationData || !savingData || !playData || !investmentData || !giveData) {
 		return <div>Loading</div>;
 	}
 
 	const Categories = [
 		{
 			icon: faJar,
-			color: "red",
+			color: "#fc424a",
 			title: "Necessities",
 			description: "Remaining money:",
-			quantity: necessitiesData[0].necessitiesLeft,
+			quantity: necessitiesData.map((item) => item.necessitiesLeft),
 		},
 		{
 			icon: faJar,
-			color: "yellow",
+			color: "#8f5fe8",
 			title: "Education",
 			description: "Remaining money:",
-			quantity: educationData[0].educationLeft,
+			quantity: educationData.map((item) => item.educationLeft),
 		},
 		{
 			icon: faJar,
-			color: "blue",
+			color: "#ffab00",
 			title: "Saving",
 			description: "Remaining money:",
-			quantity: savingData[0].savingLeft,
+			quantity: savingData.map((item) => item.savingLeft),
 		},
-		{ icon: faJar, color: "green", title: "Play", description: "Remaining money:", quantity: playData[0].playLeft },
 		{
 			icon: faJar,
-			color: "pink",
+			color: "#00d25b",
+			title: "Play",
+			description: "Remaining money:",
+			quantity: playData.map((item) => item.playLeft),
+		},
+		{
+			icon: faJar,
+			color: "#0090e7",
 			title: "Investment",
 			description: "Remaining money:",
-			quantity: investmentData[0].investmentLeft,
+			quantity: investmentData.map((item) => item.investmentLeft),
 		},
-		{ icon: faJar, color: "cyan", title: "Give", description: "Remaining money:", quantity: giveData[0].giveLeft },
+		{
+			icon: faJar,
+			color: "#0dcaf0",
+			title: "Give",
+			description: "Remaining money:",
+			quantity: giveData.map((item) => item.giveLeft),
+		},
 	];
 
 	const Statistics = [
 		{
 			icon: faEquals,
-			color: "blue",
+			color: "#ffab00",
 			title: "BALANCE",
 			description: "This month:",
-			quantity: incomesData[0].incomesSum - expensesData[0].expensesSum,
+			quantity: incomesData.map((item) => item.incomesSum) - expensesData.map((item) => item.expensesSum),
 		},
-		{ icon: faPlus, color: "green", title: "INCOMES", description: "This month:", quantity: incomesData[0].incomesSum },
+		{
+			icon: faPlus,
+			color: "#00d25b",
+			title: "INCOMES",
+			description: "This month:",
+			quantity: incomesData.map((item) => item.incomesSum),
+		},
 		{
 			icon: faMinus,
-			color: "red",
+			color: "#fc424a",
 			title: "EXPENSES",
 			description: "This month:",
-			quantity: expensesData[0].expensesSum,
+			quantity: expensesData.map((item) => item.expensesSum),
 		},
 	];
-
-	console.log(giveData);
 
 	return (
 		<Main bgColor="#0d0d0d">

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import TransactionForm from "../components/TransactionForm/TransactionForm";
 import Main from "../components/Main/Main";
 import Notification from "../components/Notification/Notification";
 import Tabs from "../components/Tabs/Tabs";
+import TransactionForm from "../components/TransactionForm/TransactionForm";
 
 const Transactions = () => {
 	const [error, setError] = useState();

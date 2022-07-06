@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Main from "../components/Main/Main";
 import Notification from "../components/Notification/Notification";
 import RegisterForm from "../components/RegisterForm/RegisterForm";
 
 const Register = () => {
 	const [error, setError] = useState();
+
+	const navigate = useNavigate();
 
 	const registerUser = async (inputs) => {
 		try {
@@ -21,6 +24,7 @@ const Register = () => {
 				return setError(data.err);
 			}
 
+			navigate("/");
 			return setError("Registration succesfull");
 		} catch (err) {
 			return setError(err.message);
@@ -29,8 +33,7 @@ const Register = () => {
 
 	return (
 		<Main bgColor="#0d0d0d">
-			{error && <Notification>{error}</Notification>}
-			<RegisterForm handleSubmit={registerUser} />;
+			<RegisterForm handleSubmit={registerUser} />;{error && <Notification>{error}</Notification>}
 		</Main>
 	);
 };

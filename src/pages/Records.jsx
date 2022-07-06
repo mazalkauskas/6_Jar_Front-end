@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Main from "../components/Main/Main";
-import Table from "../components/Table/Table";
 import Section from "../components/Section/Section";
+import Table from "../components/Table/Table";
 
 const Home = () => {
 	const TableHeading = [
