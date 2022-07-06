@@ -24,10 +24,6 @@ _npm install_
 
 _npm start_
 
-**Start storybook**
-
-_npm run storybook_
-
 _Make sure your back-end server is running, before launching Front-end client_
 
 </div>
