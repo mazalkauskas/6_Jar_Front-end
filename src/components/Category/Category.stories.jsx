@@ -11,6 +11,13 @@ export default {
 
 export const Primary = () => (
 	<ThemeProvider theme={theme}>
-		<Category icon={faJar} iconColor={"blue"} title="Long Term" description="Remaining money:" quantity="999" />
+		<Category
+			icon={faJar}
+			iconColor={"blue"}
+			title="Long Term"
+			description="Remaining money:"
+			quantity="999"
+			handleClick={() => console.log("hey")}
+		/>
 	</ThemeProvider>
 );

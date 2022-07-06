@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 import * as S from "./Navigation.styles";
 import { useNavigate } from "react-router-dom";
 
-const Navigation = ({ className, links }) => {
+const Navigation = ({ className }) => {
 	const navigate = useNavigate();
 	return (
 		<S.Nav className={className}>
@@ -34,6 +34,7 @@ const Navigation = ({ className, links }) => {
 					<S.StyledLink to={"/change-password"}>Change password</S.StyledLink>
 
 					<Button
+						shape="Outline"
 						handleClick={() => {
 							localStorage.removeItem("token");
 							navigate("/");

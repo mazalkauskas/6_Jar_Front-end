@@ -1,8 +1,10 @@
 import React from "react";
 import * as S from "./CategoryList.styles";
 import Category from "../Category/Category";
+import { useNavigate } from "react-router-dom";
 
 const CategoryList = ({ title, categories }) => {
+	const navigate = useNavigate();
 	return (
 		<>
 			<S.Title>{title}</S.Title>

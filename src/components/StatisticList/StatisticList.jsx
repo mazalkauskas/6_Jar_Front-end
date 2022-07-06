@@ -1,8 +1,11 @@
 import React from "react";
 import * as S from "./StatisticList.styles";
 import Category from "../Category/Category";
+import { useNavigate } from "react-router-dom";
 
 const StatisticList = ({ title, categories }) => {
+	const navigate = useNavigate();
+
 	return (
 		<>
 			<S.Title>{title}</S.Title>
@@ -15,6 +18,9 @@ const StatisticList = ({ title, categories }) => {
 							title={category.title}
 							description={category.description}
 							quantity={category.quantity}
+							handleClick={() => {
+								navigate("/transactions");
+							}}
 						/>
 					))}
 			</S.StatisticList>
