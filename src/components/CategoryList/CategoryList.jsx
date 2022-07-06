@@ -1,17 +1,17 @@
 import React from "react";
-import * as S from "./CategoryList.styles";
+import PropTypes from "prop-types";
 import Category from "../Category/Category";
-import { useNavigate } from "react-router-dom";
+import * as S from "./CategoryList.styles";
 
 const CategoryList = ({ title, categories }) => {
-	const navigate = useNavigate();
 	return (
 		<>
 			<S.Title>{title}</S.Title>
 			<S.CategoryList>
 				{categories.length > 0 &&
-					categories.map((category) => (
+					categories.map((category, index) => (
 						<Category
+							key={index}
 							icon={category.icon}
 							iconColor={category.color}
 							title={category.title}
@@ -23,6 +23,11 @@ const CategoryList = ({ title, categories }) => {
 			<S.Line />
 		</>
 	);
+};
+
+CategoryList.propTypes = {
+	title: PropTypes.string.isRequired,
+	categories: PropTypes.array.isRequired,
 };
 
 export default CategoryList;

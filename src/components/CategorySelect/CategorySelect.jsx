@@ -6,12 +6,14 @@ const CategorySelect = ({ options, label, handleChange }) => {
 	return (
 		<S.InputField>
 			<label htmlFor={label}>{label}</label>
-			<S.Select id={label} name={label} onChange={(e) => handleChange(e.target.value)}>
-				<option selected disabled>
+			<S.Select defaultValue={"default"} id={label} name={label} onChange={(e) => handleChange(e.target.value)}>
+				<option value="default" disabled>
 					Choose category
 				</option>
-				{options.map((option) => (
-					<option value={option.value}>{option.value.charAt(0).toUpperCase() + option.value.slice(1)}</option>
+				{options.map((option, index) => (
+					<option key={index} value={option.value}>
+						{option.value.charAt(0).toUpperCase() + option.value.slice(1)}
+					</option>
 				))}
 			</S.Select>
 		</S.InputField>

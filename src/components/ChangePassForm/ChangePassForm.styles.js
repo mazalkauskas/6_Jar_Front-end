@@ -15,7 +15,8 @@ export const Title = styled.h1`
 `;
 
 export const Control = styled.div`
-	@media (max-width: ${(props) => props.theme.sizes.breakpoints.m}) {
-		text-align: center;
+	text-align: center;
+	@media (min-width: ${(props) => props.theme.sizes.breakpoints.m}) {
+		text-align: start;
 	}
 `;

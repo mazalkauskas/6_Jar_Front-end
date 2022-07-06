@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import Button from "../Button/Button";
+import CategorySelect from "../CategorySelect/CategorySelect";
 import Section from "../Section/Section";
 import TextInput from "../TextInput/TextInput";
-import CategorySelect from "../CategorySelect/CategorySelect";
-import Button from "../Button/Button";
 import * as S from "./TransactionForm.styles";
 
 const TransactionForm = ({ type, options, handleSubmit }) => {
@@ -39,7 +39,7 @@ const TransactionForm = ({ type, options, handleSubmit }) => {
 					handleChange={(quantityValue) => updateTransactionValues({ ...transactionValues, quantity: quantityValue })}
 				/>
 				<S.Control>
-					<Button type="submit">Add an {type}</Button>
+					<Button type="submit">Add a transaction</Button>
 				</S.Control>
 			</S.Form>
 		</Section>

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import Button from "../Button/Button";
 import Section from "../Section/Section";
 import TextInput from "../TextInput/TextInput";
-import Button from "../Button/Button";
 import * as S from "./RegisterForm.styles";
 
 const LoginForm = ({ handleSubmit }) => {
@@ -35,7 +35,9 @@ const LoginForm = ({ handleSubmit }) => {
 					placeholder="Enter your password"
 					handleChange={(passwordValue) => updateLoginValues({ ...registerValues, password: passwordValue })}
 				/>
-				<Button type="submit">Sign up</Button>
+				<S.Control>
+					<Button type="submit">Sign up</Button>
+				</S.Control>
 			</S.Form>
 		</Section>
 	);

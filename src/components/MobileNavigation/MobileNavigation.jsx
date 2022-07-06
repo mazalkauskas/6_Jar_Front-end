@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../Button/Button";
 import Logo from "../Logo/Logo";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
 import * as S from "./MobileNavigation.styles";
 
 const MobileNavigation = ({ className }) => {

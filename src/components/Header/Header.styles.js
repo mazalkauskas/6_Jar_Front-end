@@ -12,14 +12,14 @@ export const Header = styled.header`
 `;
 
 export const StyledNav = styled(Navigation)`
-	@media (max-width: ${(props) => props.theme.sizes.breakpoints.m}) {
-		display: none;
+	display: none;
+	@media (min-width: ${(props) => props.theme.sizes.breakpoints.m}) {
+		display: flex;
 	}
 `;
 
 export const StyledMobNav = styled(MobileNavigation)`
-	display: none;
-	@media (max-width: ${(props) => props.theme.sizes.breakpoints.m}) {
-		display: flex;
+	@media (min-width: ${(props) => props.theme.sizes.breakpoints.m}) {
+		display: none;
 	}
 `;

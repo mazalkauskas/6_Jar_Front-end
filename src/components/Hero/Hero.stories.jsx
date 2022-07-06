@@ -10,6 +10,6 @@ export default {
 
 export const Primary = () => (
 	<ThemeProvider theme={theme}>
-		<Hero title="Title" subtitle="Subtitle text is here" />
+		<Hero title1="Title" title2="Title" title3="Title" subtitle="Subtitle text is here" />
 	</ThemeProvider>
 );

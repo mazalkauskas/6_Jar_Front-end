@@ -2,16 +2,16 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Container = styled.div`
-	border: ${(props) => props.theme.sizes.borders.s} solid ${(props) => props.theme.colors.background.lightbody};
 	border-radius: ${(props) => props.theme.sizes.radius.m};
+	border: ${(props) => props.theme.sizes.borders.s} solid ${(props) => props.theme.colors.background.lightbody};
 	color: ${(props) => props.theme.colors.text.primary};
-	padding: ${(props) => props.theme.sizes.spacing.xl};
 	margin: ${(props) => props.theme.sizes.spacing.l} 0;
+	padding: ${(props) => props.theme.sizes.spacing.xl};
 `;
 
 export const Control = styled.div`
-	display: flex;
 	align-items: center;
+	display: flex;
 	justify-content: space-between;
 `;
 

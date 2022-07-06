@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "storybook-addon-react-router-v6";
 import StatisticList from "./StatisticList";
 import { ThemeProvider } from "styled-components";
 import theme from "../../theme";
@@ -13,6 +14,7 @@ const Categories = [
 export default {
 	title: "Views/StatisticList",
 	component: StatisticList,
+	decorators: [withRouter],
 };
 
 export const Primary = () => (

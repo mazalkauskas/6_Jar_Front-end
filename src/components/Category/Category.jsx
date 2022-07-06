@@ -18,7 +18,11 @@ const Category = ({ icon, iconColor, title, description, quantity, handleClick }
 };
 
 Category.propTypes = {
+	icon: PropTypes.object.isRequired,
+	iconColor: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
+	description: PropTypes.string,
+	quantity: PropTypes.any.isRequired,
 	handleClick: PropTypes.func,
 };
 

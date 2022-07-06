@@ -1,9 +1,8 @@
 import React from "react";
-import Logo from "../Logo/Logo";
-import PropTypes from "prop-types";
-import Button from "../Button/Button";
-import * as S from "./Navigation.styles";
 import { useNavigate } from "react-router-dom";
+import Button from "../Button/Button";
+import Logo from "../Logo/Logo";
+import * as S from "./Navigation.styles";
 
 const Navigation = ({ className }) => {
 	const navigate = useNavigate();
@@ -46,15 +45,6 @@ const Navigation = ({ className }) => {
 			)}
 		</S.Nav>
 	);
-};
-
-Navigation.propTypes = {
-	links: PropTypes.arrayOf(
-		PropTypes.shape({
-			url: PropTypes.string.isRequired,
-			title: PropTypes.string.isRequired,
-		})
-	),
 };
 
 export default Navigation;

@@ -1,7 +1,7 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import * as S from "./StatisticList.styles";
 import Category from "../Category/Category";
-import { useNavigate } from "react-router-dom";
 
 const StatisticList = ({ title, categories }) => {
 	const navigate = useNavigate();
@@ -11,8 +11,9 @@ const StatisticList = ({ title, categories }) => {
 			<S.Title>{title}</S.Title>
 			<S.StatisticList>
 				{categories.length > 0 &&
-					categories.map((category) => (
+					categories.map((category, index) => (
 						<Category
+							key={index}
 							icon={category.icon}
 							iconColor={category.color}
 							title={category.title}

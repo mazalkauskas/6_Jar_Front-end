@@ -42,8 +42,8 @@ export const Control2 = styled.div`
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		width: 100%;
 		text-align: center;
+		width: 100%;
 	}
 	@media (min-width: ${(props) => props.theme.sizes.breakpoints.l}) {
 		display: flex;

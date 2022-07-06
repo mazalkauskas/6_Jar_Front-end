@@ -1,18 +1,18 @@
 import React from "react";
 import Tabs from "./Tabs";
-import LoginForm from "../LoginForm/LoginForm";
+import LoginForm from "../TransactionForm/LoginForm";
 import RegisterForm from "../RegisterForm/RegisterForm";
 import { ThemeProvider } from "styled-components";
 import theme from "../../theme";
 
 export default {
-	title: "Components/Tabs",
+	title: "Views/Tabs",
 	component: Tabs,
 };
 
 const TabsTitles = [
-	{ title: "Income", content: <LoginForm /> },
-	{ title: "Expenses", content: <RegisterForm /> },
+	{ title: "Login", content: <LoginForm /> },
+	{ title: "Register", content: <RegisterForm /> },
 ];
 
 export const Primary = () => (

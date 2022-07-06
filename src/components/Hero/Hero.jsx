@@ -19,8 +19,11 @@ const Hero = ({ title1, title2, title3, subtitle, children }) => {
 };
 
 Hero.propTypes = {
-	title: PropTypes.string.isRequired,
+	title1: PropTypes.string.isRequired,
+	title2: PropTypes.string,
+	title3: PropTypes.string,
 	subtitle: PropTypes.string,
+	children: PropTypes.node,
 };
 
 export default Hero;

@@ -7,15 +7,19 @@ const Table = ({ title, column, data }) => {
 		<>
 			<S.Title>{title}</S.Title>
 			<S.Container>
-				<S.Table>
-					<S.Row>
-						{column.map((item) => (
-							<TableHeadItem item={item} />
+				<S.Table cellSpacing={0}>
+					<thead>
+						<S.Row>
+							{column.map((item, index) => (
+								<TableHeadItem key={index} item={item} />
+							))}
+						</S.Row>
+					</thead>
+					<tbody>
+						{data.map((item, index) => (
+							<TableRow key={index} item={item} column={column} />
 						))}
-					</S.Row>
-					{data.map((item) => (
-						<TableRow item={item} column={column} />
-					))}
+					</tbody>
 				</S.Table>
 			</S.Container>
 			<S.Line />
@@ -30,8 +34,8 @@ const TableHeadItem = ({ item }) => {
 const TableRow = ({ item, column }) => {
 	return (
 		<S.Row>
-			{column.map((columnItem) => {
-				return <S.Cell>{item[`${columnItem.value}`]}</S.Cell>;
+			{column.map((columnItem, index) => {
+				return <S.Cell key={index}>{item[`${columnItem.value}`]}</S.Cell>;
 			})}
 			<S.Cell>
 				<S.StyledIcon icon={faXmark} />

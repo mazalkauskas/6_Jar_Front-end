@@ -10,13 +10,13 @@ export default {
 	decorators: [withRouter],
 };
 
-const links = [
-	{ url: "/", title: "Login" },
-	{ url: "/", title: "Register" },
+const Links = [
+	{ url: "/login", title: "Sign in" },
+	{ url: "/register", title: "Sign up" },
 ];
 
 export const Primary = () => (
 	<ThemeProvider theme={theme}>
-		<Navigation links={links} />
+		<Navigation links={Links} />
 	</ThemeProvider>
 );

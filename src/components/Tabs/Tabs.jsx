@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import Section from "../Section/Section";
 import * as S from "./Tabs.styles";
 
@@ -24,6 +25,10 @@ const Tabs = ({ tabItems }) => {
 			</S.Container>
 		</Section>
 	);
+};
+
+Tabs.propTypes = {
+	tabItems: PropTypes.array.isRequired,
 };
 
 export default Tabs;

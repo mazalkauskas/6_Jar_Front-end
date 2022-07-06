@@ -30,6 +30,7 @@ const Button = ({ shape, type, children, handleClick }) => {
 };
 
 Button.propTypes = {
+	shape: PropTypes.string,
 	type: PropTypes.oneOf(["submit", "reset", "button"]),
 	children: PropTypes.string.isRequired,
 	handleClick: PropTypes.func,

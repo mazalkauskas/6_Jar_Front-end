@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as S from "./Notification.styles";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
+import * as S from "./Notification.styles";
 
 const Notification = ({ children }) => {
 	return (

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import Button from "../Button/Button";
 import Section from "../Section/Section";
 import TextInput from "../TextInput/TextInput";
-import Button from "../Button/Button";
 import * as S from "./LoginForm.styles";
 
 const LoginForm = ({ handleSubmit }) => {

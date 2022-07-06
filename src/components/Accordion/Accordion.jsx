@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import * as S from "./Accordion.styles";
 
@@ -16,6 +17,11 @@ const Accordion = ({ title, children }) => {
 			{isOpen && <S.Text>{children}</S.Text>}
 		</S.Container>
 	);
+};
+
+Accordion.propTypes = {
+	title: PropTypes.string.isRequired,
+	children: PropTypes.node.isRequired,
 };
 
 export default Accordion;
